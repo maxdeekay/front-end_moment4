@@ -9,7 +9,11 @@ toggleButton.onclick = () => {
 
 // YELLOW BALL
 const yellowBall = document.getElementById("yellow");
+const colorCode = document.getElementById("color-code");
 
 yellowBall.onclick = () => {
-    yellowBall.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    const color = "#" + Math.floor(Math.random() * 16777215).toString(16)
+    yellowBall.style.backgroundColor = color;
+    colorCode.style.color = color;
+    colorCode.innerHTML = color;
 }

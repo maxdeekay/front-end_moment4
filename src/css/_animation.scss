@@ -60,18 +60,31 @@
 #left, #right {
     width: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
+
+    h3 {
+        position: absolute;
+        top: 0;
+    }
+    
 }
 
 #right {    
-    h3 {
-        margin-top: 1em;
+    #color-code {
+        @include box(110px, 35px, true);
+        background-color: $article-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFFF44;
     }
 
     #yellow {
         @include box(80px, 80px, true, 50%);
-        background-color: rgb(255, 255, 68);
+        background-color: #ffff44;
         position: absolute;
         top: 50px;
         left: 50px;
@@ -82,14 +95,6 @@
 }
 
 #left {
-    flex-direction: column;
-    align-items: center;
-
-    h3 {
-        position: absolute;
-        top: 0;
-    }
-
     #heart {
         height: 100px;
         width: 100px;
