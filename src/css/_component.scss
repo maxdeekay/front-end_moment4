@@ -15,12 +15,13 @@ h2 {
 
 %text-style { color: base.$text-color; }
 
-@mixin box($width, $height, $radius: false) {
+@mixin box($width, $height, $radius: false, $radius-amount: 10px) {
     width: $width;
     height: $height;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 
     @if $radius {
-        border-radius: 10px
+        border-radius: $radius-amount;
     }
 }
 
