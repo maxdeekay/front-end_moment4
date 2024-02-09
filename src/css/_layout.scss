@@ -7,6 +7,10 @@ body {
     margin-left: 0.5em;
 }
 
+::selection {
+    background: base.$accent-color;
+}
+
 main {
     max-width: 100%;
     padding-right: 1.5em;
